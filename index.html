@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Northstar Cafe</title>
+    <link rel="shortcut icon" href="./img/favicon.ico">
     <meta name="Description" content="Enter your description here"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -13,7 +15,8 @@
     <!-- Google Fonts - Lato -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 	<!-- Animate.css https://daneden.github.io/animate.css/ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
     <!-- LightBox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
 	<!-- Owl Carousel  CSS https://cdnjs.com/libraries/OwlCarousel2   |   http://owlcarousel2.github.io/OwlCarousel2/ -->
@@ -28,12 +31,169 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <title>Northstar Cafe</title>
+
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbarResponsive">
+    <!-- Start of Landing Page -->
+    <div id="home">
+    <!-- End of Landing Page -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <!-- Navbar Brand -->
+				<a href="#home" class="navbar-brand"><img src="./img/navbarBrand.png" alt=""></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+					<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>   
+                <!-- Nav Links -->
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="#home" class="nav-link">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="#philosophy" class="nav-link">Our Philosophy</a>
+						</li>
+						<li class="nav-item">
+							<a href="#portfolio" class="nav-link">Portfolio</a>
+						</li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown1" aria-haspopup="true" aria-expanded="false">Locations</a>
+							<ul class="first dropdown-menu" aria-labelledby="Locations">
+								<li><a class="dropdown-item" href="#pricing">Beechwold</a></li>
+								<li><a class="dropdown-item" href="#pricing">Easton</a></li>
+								<li><a class="dropdown-item" href="#pricing">Liberty Center</a></li>
+								<li><a class="dropdown-item" href="#pricing">Short North</a></li>
+								<li><a class="dropdown-item" href="#pricing">Westerville</a></li>
+							</ul>
+						</li>
 
+						<li class="nav-item">
+							<a href="#team" class="nav-link">Team</a>
+						</li>
+						<li class="nav-item">
+							<a href="#skills" class="nav-link">Skills</a>
+						</li>
+						<li class="nav-item">
+							<a href="#clients" class="nav-link">Clients</a>
+						</li>
+						<li class="nav-item">
+							<a href="#contact" class="nav-link">Contact</a>
+						</li>
+					</ul>
+				</div>                
+            </div> <!-- End of Container Fluid -->
+        </nav>
+        <!-- End of Navbar -->
+        <!--- Video Background -->
+		<div class="video-background">
+			<div class="video-wrap">
+				<div id="video">
+					<video id="bgvid" playsinline autoplay muted loop>
+						<source src="./coffeeMachine.mp4" type="video/mp4">
+						<source src="./coffeeMachine.webm" type="video/webm">
+					</video>
+				</div> <!--- End Video ID -->
+			</div> <!--- End Video Wrap -->
+        </div> <!--- End Video Background -->
+		<!-- Start Landing Page Caption -->
+			<!-- See 'WAYPOINTS ANIMATION DELAY' section of plugins.js for more info on the 'os-animation', 'data-animation', 'data-delay' classes -->
+			<!-- Also see the 'plugins.css' file where we've turned off animations on some mobile devices -->
+			<!-- data-delay can be used to delay animations. Here, it's good practice so the animation does not fire off before the website finished loading -->
+			<div class="caption text-center text-light text-uppercase">
+				<h1 class="font-weight-bold os-animation" data-animation="bounceInUp" data-delay="0.6s">Welcome to <span class="text-northstar">Northstar</span> Café</h1>
+				<h3 class="os-animation" data-animation="bounceInUp" data-delay="0.8s">Serving Columbus since 2004</h3>
+				<a href="#philosophy" class="btn btn-outline-light btn-lg rounded-0 os-animation" data-animation="bounceInUp" data-delay="1s">Learn More</a>
+			</div>
+		<!-- End Landing Page Caption -->
 
+		<!-- start bouncing down arrow -->
+			<a href="#philosophy" class="down-arrow text-center">
+				<div class="arrow d-none d-md-block">
+					<i class="fas fa-angle-down"></i>
+				</div>
+			</a>
+		<!-- end bouncing down arrow -->
+    </div>
+    <!-- End of Landing Page -->
 
+    <div id="philosophy" class="offset">
+        <!-- Start Theme Heading -->
+		<div class="container-fluid p-0">
+			<div class="row text-center py-4 os-animation justify-content-center" data-animation="fadeInUp">
+				<div class="col-11 col-md-10 col-lg-9">
+					<h1>Northstar Café</h1>
+					<p class="lead">We are a locally owned restaurant with five locations in Columbus, Ohio.</p>
+					<!-- <a href="#contact" class="btn btn-secondary btn-sm">Request A Quote</a> -->
+					<!-- <a href="#portfolio" class="btn btn-nuno btn-sm">See Our Portfolio</a> -->
+				</div>
+			</div>
+		</div>
+        <!-- End Theme Heading -->
+		<!-- Start of Landing Page Carousel -->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<!-- Slide One -->
+				<div class="carousel-item active" style="background-image: url('/img/Philosophy Carousel/chalkLarge.jpg')" alt="">
+                    <div class="opacity-layer-black">
+                        <!-- <div class="carousel-caption d-none d-md-block">
+                            <h5>PHILOSOPHY</h5>
+                            <p class="lead">At Northstar, we recognize that every decision we make affects the health of our community and the environment on a local and on a global scale. We make conscious decisions about the kinds of locations we choose, the way we build our restaurants and the  operating supplies we purchase in the cafes.</p>
+                            <br>
+                            <p class="lead">Most importantly, we're extremely careful about the ingredients we use. We choose locally grown, organic, and artisan produced foods not only to protect the environment and to support producers whose values are aligned with ours but also so that we are serving the most wholesome and delicious food we can.</p>
+                        </div> -->
+                        <div class="philosophy-caption text-center">
+                            <div class="container">
+                                <h3 class="os-animation" data-animation="fadeInUp" data-delay=".6s">PHILOSOPHY</h3>
+                                <p class="lead os-animation" data-animation="fadeInUp" data-delay=".8s">At Northstar, we recognize that every decision we make affects the health of our community and the environment on a local and on a global scale. We make conscious decisions about the kinds of locations we choose, the way we build our restaurants and the  operating supplies we purchase in the cafes.</p>
+                                <br>
+                                <p class="lead os-animation" data-animation="fadeInUp" data-delay=".9s">Most importantly, we're extremely careful about the ingredients we use. We choose locally grown, organic, and artisan produced foods not only to protect the environment and to support producers whose values are aligned with ours but also so that we are serving the most wholesome and delicious food we can.</p>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<!-- Slide Two -->
+				<div class="carousel-item" style="background-image: url('/img/Philosophy Carousel/nightTimeLarge.jpg')" alt="">
+                    <div class="opacity-layer-black">
+                        <!-- <div class="philosophy-caption text-center">
+                            <h3 class>SUSTAINABILITY</h3>
+                            <p class="lead">Our commitment to making responsible decisions and being connected to our community is motivated by our collective desire to serve more than we demand, to give more than we take. Yet, we realize that we are not able to have a totally sustainable and harmless business, and we have an obligation to mitigate the damage that we cause.</p>
+                            <br>
+                            <p class="lead">To date, Northstar has donated over two hundred fifty thousand dollars to these and similar organizations, because "there is no business to be done on a dead planet." - David Brower</p>
+                        </div> -->
+                        <div class="philosophy-caption text-center">
+                            <div class="container">
+                                <h3 class="os-animation" data-animation="fadeInUp" data-delay=".6s">SUSTAINABILITY</h3>
+                                <p class="lead os-animation" data-animation="fadeInUp" data-delay=".8s">Our commitment to making responsible decisions and being connected to our community is motivated by our collective desire to serve more than we demand, to give more than we take. Yet, we realize that we are not able to have a totally sustainable and harmless business, and we have an obligation to mitigate the damage that we cause.</p>
+                                <br>
+                                <p class="lead os-animation" data-animation="fadeInUp" data-delay=".9s">To date, Northstar has donated over two hundred fifty thousand dollars to these and similar organizations, because "there is no business to be done on a dead planet." - David Brower</p>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<!-- Previous and Next Buttons -->
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<!-- End of Landing Page Carousel -->
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas error, hic accusantium, distinctio, sapiente debitis fuga ea impedit exercitationem quo iure dolor! Perferendis, praesentium rerum necessitatibus nemo rem quam a et voluptatem quidem itaque placeat eius, eum atque. Harum provident soluta quae officia quasi ipsa iusto sint, illo, culpa sapiente perspiciatis aut accusamus cum, dicta sit tempore optio dolores dolorem. Reprehenderit impedit vel deleniti odio maiores, provident aut perspiciatis dolorem quis ex iste accusantium officiis neque ipsum, labore quia possimus reiciendis placeat eligendi numquam. Magni adipisci incidunt libero! Eveniet ut, eum voluptatum itaque amet dignissimos unde deleniti voluptas, accusamus consectetur repellendus saepe in eaque maiores quo rem? Tempore, est ipsa, accusamus nulla, velit eveniet nisi saepe inventore nihil ea consectetur tenetur. Maxime suscipit sequi doloribus ab quod non repellendus neque laborum est expedita molestiae temporibus ipsum obcaecati quaerat et distinctio, aperiam iure libero unde, eveniet sapiente impedit minima vel? Doloribus delectus voluptatibus perspiciatis, quidem nesciunt expedita adipisci nisi in libero magni, quaerat placeat ut temporibus atque, facilis voluptatem natus possimus amet doloremque ad maxime molestiae sequi fugit. Itaque nemo id quis suscipit aliquid aut deleniti atque eius iste, eligendi, maxime assumenda voluptates excepturi ea dolores culpa dolore enim soluta, placeat sed magnam molestias eos? Quae nemo minus culpa maiores amet eum doloribus omnis, cupiditate, eaque quos obcaecati animi, iusto aut doloremque dicta a rem nulla deserunt! Accusantium atque reiciendis, culpa expedita iure illum! Similique veritatis, dolores a consequuntur odio quod nihil deleniti autem reprehenderit aspernatur fugiat atque illo, aut libero! Molestias laboriosam officiis tempore quidem eveniet molestiae delectus? Consectetur necessitatibus eveniet nobis cumque ullam, eaque molestiae cum harum quae consequatur. Eos animi optio voluptate minima. Temporibus sint, nesciunt itaque consequuntur explicabo vero voluptatem est. Ipsa nesciunt officiis quibusdam, ipsam repellendus corrupti iure dolores excepturi sed veniam? Illo sed explicabo praesentium officiis saepe excepturi incidunt itaque distinctio, ab sapiente exercitationem id odio animi neque quo dolorum, ducimus repellendus maiores unde et ratione suscipit quam nobis? Facilis modi aliquid voluptatibus, quibusdam magni adipisci dolor consequatur commodi consectetur ex harum, voluptatum rem, et in veniam deserunt aliquam. Culpa nesciunt aperiam corrupti, modi beatae, ipsum explicabo odit cupiditate cumque nemo expedita saepe nisi quaerat repellendus reprehenderit architecto ab. Eveniet doloremque sint earum incidunt aliquid officiis quod culpa facilis praesentium esse qui libero expedita rerum voluptates nam maiores, facere sapiente similique laboriosam explicabo natus at error. Minus numquam sit laborum vitae, eligendi tempore nulla officiis iste! Aut sed numquam eaque quam at dignissimos maxime. Doloribus sed veniam fugiat reiciendis vel quos commodi vero iusto. Non ipsum error numquam alias illum obcaecati voluptatibus consequuntur, repellat iste, porro ratione explicabo sed, minima maxime dolore maiores! Adipisci veritatis omnis ex, iste animi eum dolore atque autem repellat, voluptatibus debitis officia ab voluptatem odio laborum tempore, repudiandae delectus. Recusandae, delectus quis minima soluta voluptates, id ratione et cupiditate alias commodi esse laboriosam quae dolore sed hic ducimus fugiat, ipsum quam dolor! Corrupti maiores earum, eum cupiditate incidunt voluptatibus neque rerum veniam, deleniti molestias dicta eos et impedit quod deserunt!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas error, hic accusantium, distinctio, sapiente debitis fuga ea impedit exercitationem quo iure dolor! Perferendis, praesentium rerum necessitatibus nemo rem quam a et voluptatem quidem itaque placeat eius, eum atque. Harum provident soluta quae officia quasi ipsa iusto sint, illo, culpa sapiente perspiciatis aut accusamus cum, dicta sit tempore optio dolores dolorem. Reprehenderit impedit vel deleniti odio maiores, provident aut perspiciatis dolorem quis ex iste accusantium officiis neque ipsum, labore quia possimus reiciendis placeat eligendi numquam. Magni adipisci incidunt libero! Eveniet ut, eum voluptatum itaque amet dignissimos unde deleniti voluptas, accusamus consectetur repellendus saepe in eaque maiores quo rem? Tempore, est ipsa, accusamus nulla, velit eveniet nisi saepe inventore nihil ea consectetur tenetur. Maxime suscipit sequi doloribus ab quod non repellendus neque laborum est expedita molestiae temporibus ipsum obcaecati quaerat et distinctio, aperiam iure libero unde, eveniet sapiente impedit minima vel? Doloribus delectus voluptatibus perspiciatis, quidem nesciunt expedita adipisci nisi in libero magni, quaerat placeat ut temporibus atque, facilis voluptatem natus possimus amet doloremque ad maxime molestiae sequi fugit. Itaque nemo id quis suscipit aliquid aut deleniti atque eius iste, eligendi, maxime assumenda voluptates excepturi ea dolores culpa dolore enim soluta, placeat sed magnam molestias eos? Quae nemo minus culpa maiores amet eum doloribus omnis, cupiditate, eaque quos obcaecati animi, iusto aut doloremque dicta a rem nulla deserunt! Accusantium atque reiciendis, culpa expedita iure illum! Similique veritatis, dolores a consequuntur odio quod nihil deleniti autem reprehenderit aspernatur fugiat atque illo, aut libero! Molestias laboriosam officiis tempore quidem eveniet molestiae delectus? Consectetur necessitatibus eveniet nobis cumque ullam, eaque molestiae cum harum quae consequatur. Eos animi optio voluptate minima. Temporibus sint, nesciunt itaque consequuntur explicabo vero voluptatem est. Ipsa nesciunt officiis quibusdam, ipsam repellendus corrupti iure dolores excepturi sed veniam? Illo sed explicabo praesentium officiis saepe excepturi incidunt itaque distinctio, ab sapiente exercitationem id odio animi neque quo dolorum, ducimus repellendus maiores unde et ratione suscipit quam nobis? Facilis modi aliquid voluptatibus, quibusdam magni adipisci dolor consequatur commodi consectetur ex harum, voluptatum rem, et in veniam deserunt aliquam. Culpa nesciunt aperiam corrupti, modi beatae, ipsum explicabo odit cupiditate cumque nemo expedita saepe nisi quaerat repellendus reprehenderit architecto ab. Eveniet doloremque sint earum incidunt aliquid officiis quod culpa facilis praesentium esse qui libero expedita rerum voluptates nam maiores, facere sapiente similique laboriosam explicabo natus at error. Minus numquam sit laborum vitae, eligendi tempore nulla officiis iste! Aut sed numquam eaque quam at dignissimos maxime. Doloribus sed veniam fugiat reiciendis vel quos commodi vero iusto. Non ipsum error numquam alias illum obcaecati voluptatibus consequuntur, repellat iste, porro ratione explicabo sed, minima maxime dolore maiores! Adipisci veritatis omnis ex, iste animi eum dolore atque autem repellat, voluptatibus debitis officia ab voluptatem odio laborum tempore, repudiandae delectus. Recusandae, delectus quis minima soluta voluptates, id ratione et cupiditate alias commodi esse laboriosam quae dolore sed hic ducimus fugiat, ipsum quam dolor! Corrupti maiores earum, eum cupiditate incidunt voluptatibus neque rerum veniam, deleniti molestias dicta eos et impedit quod deserunt!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas error, hic accusantium, distinctio, sapiente debitis fuga ea impedit exercitationem quo iure dolor! Perferendis, praesentium rerum necessitatibus nemo rem quam a et voluptatem quidem itaque placeat eius, eum atque. Harum provident soluta quae officia quasi ipsa iusto sint, illo, culpa sapiente perspiciatis aut accusamus cum, dicta sit tempore optio dolores dolorem. Reprehenderit impedit vel deleniti odio maiores, provident aut perspiciatis dolorem quis ex iste accusantium officiis neque ipsum, labore quia possimus reiciendis placeat eligendi numquam. Magni adipisci incidunt libero! Eveniet ut, eum voluptatum itaque amet dignissimos unde deleniti voluptas, accusamus consectetur repellendus saepe in eaque maiores quo rem? Tempore, est ipsa, accusamus nulla, velit eveniet nisi saepe inventore nihil ea consectetur tenetur. Maxime suscipit sequi doloribus ab quod non repellendus neque laborum est expedita molestiae temporibus ipsum obcaecati quaerat et distinctio, aperiam iure libero unde, eveniet sapiente impedit minima vel? Doloribus delectus voluptatibus perspiciatis, quidem nesciunt expedita adipisci nisi in libero magni, quaerat placeat ut temporibus atque, facilis voluptatem natus possimus amet doloremque ad maxime molestiae sequi fugit. Itaque nemo id quis suscipit aliquid aut deleniti atque eius iste, eligendi, maxime assumenda voluptates excepturi ea dolores culpa dolore enim soluta, placeat sed magnam molestias eos? Quae nemo minus culpa maiores amet eum doloribus omnis, cupiditate, eaque quos obcaecati animi, iusto aut doloremque dicta a rem nulla deserunt! Accusantium atque reiciendis, culpa expedita iure illum! Similique veritatis, dolores a consequuntur odio quod nihil deleniti autem reprehenderit aspernatur fugiat atque illo, aut libero! Molestias laboriosam officiis tempore quidem eveniet molestiae delectus? Consectetur necessitatibus eveniet nobis cumque ullam, eaque molestiae cum harum quae consequatur. Eos animi optio voluptate minima. Temporibus sint, nesciunt itaque consequuntur explicabo vero voluptatem est. Ipsa nesciunt officiis quibusdam, ipsam repellendus corrupti iure dolores excepturi sed veniam? Illo sed explicabo praesentium officiis saepe excepturi incidunt itaque distinctio, ab sapiente exercitationem id odio animi neque quo dolorum, ducimus repellendus maiores unde et ratione suscipit quam nobis? Facilis modi aliquid voluptatibus, quibusdam magni adipisci dolor consequatur commodi consectetur ex harum, voluptatum rem, et in veniam deserunt aliquam. Culpa nesciunt aperiam corrupti, modi beatae, ipsum explicabo odit cupiditate cumque nemo expedita saepe nisi quaerat repellendus reprehenderit architecto ab. Eveniet doloremque sint earum incidunt aliquid officiis quod culpa facilis praesentium esse qui libero expedita rerum voluptates nam maiores, facere sapiente similique laboriosam explicabo natus at error. Minus numquam sit laborum vitae, eligendi tempore nulla officiis iste! Aut sed numquam eaque quam at dignissimos maxime. Doloribus sed veniam fugiat reiciendis vel quos commodi vero iusto. Non ipsum error numquam alias illum obcaecati voluptatibus consequuntur, repellat iste, porro ratione explicabo sed, minima maxime dolore maiores! Adipisci veritatis omnis ex, iste animi eum dolore atque autem repellat, voluptatibus debitis officia ab voluptatem odio laborum tempore, repudiandae delectus. Recusandae, delectus quis minima soluta voluptates, id ratione et cupiditate alias commodi esse laboriosam quae dolore sed hic ducimus fugiat, ipsum quam dolor! Corrupti maiores earum, eum cupiditate incidunt voluptatibus neque rerum veniam, deleniti molestias dicta eos et impedit quod deserunt!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas error, hic accusantium, distinctio, sapiente debitis fuga ea impedit exercitationem quo iure dolor! Perferendis, praesentium rerum necessitatibus nemo rem quam a et voluptatem quidem itaque placeat eius, eum atque. Harum provident soluta quae officia quasi ipsa iusto sint, illo, culpa sapiente perspiciatis aut accusamus cum, dicta sit tempore optio dolores dolorem. Reprehenderit impedit vel deleniti odio maiores, provident aut perspiciatis dolorem quis ex iste accusantium officiis neque ipsum, labore quia possimus reiciendis placeat eligendi numquam. Magni adipisci incidunt libero! Eveniet ut, eum voluptatum itaque amet dignissimos unde deleniti voluptas, accusamus consectetur repellendus saepe in eaque maiores quo rem? Tempore, est ipsa, accusamus nulla, velit eveniet nisi saepe inventore nihil ea consectetur tenetur. Maxime suscipit sequi doloribus ab quod non repellendus neque laborum est expedita molestiae temporibus ipsum obcaecati quaerat et distinctio, aperiam iure libero unde, eveniet sapiente impedit minima vel? Doloribus delectus voluptatibus perspiciatis, quidem nesciunt expedita adipisci nisi in libero magni, quaerat placeat ut temporibus atque, facilis voluptatem natus possimus amet doloremque ad maxime molestiae sequi fugit. Itaque nemo id quis suscipit aliquid aut deleniti atque eius iste, eligendi, maxime assumenda voluptates excepturi ea dolores culpa dolore enim soluta, placeat sed magnam molestias eos? Quae nemo minus culpa maiores amet eum doloribus omnis, cupiditate, eaque quos obcaecati animi, iusto aut doloremque dicta a rem nulla deserunt! Accusantium atque reiciendis, culpa expedita iure illum! Similique veritatis, dolores a consequuntur odio quod nihil deleniti autem reprehenderit aspernatur fugiat atque illo, aut libero! Molestias laboriosam officiis tempore quidem eveniet molestiae delectus? Consectetur necessitatibus eveniet nobis cumque ullam, eaque molestiae cum harum quae consequatur. Eos animi optio voluptate minima. Temporibus sint, nesciunt itaque consequuntur explicabo vero voluptatem est. Ipsa nesciunt officiis quibusdam, ipsam repellendus corrupti iure dolores excepturi sed veniam? Illo sed explicabo praesentium officiis saepe excepturi incidunt itaque distinctio, ab sapiente exercitationem id odio animi neque quo dolorum, ducimus repellendus maiores unde et ratione suscipit quam nobis? Facilis modi aliquid voluptatibus, quibusdam magni adipisci dolor consequatur commodi consectetur ex harum, voluptatum rem, et in veniam deserunt aliquam. Culpa nesciunt aperiam corrupti, modi beatae, ipsum explicabo odit cupiditate cumque nemo expedita saepe nisi quaerat repellendus reprehenderit architecto ab. Eveniet doloremque sint earum incidunt aliquid officiis quod culpa facilis praesentium esse qui libero expedita rerum voluptates nam maiores, facere sapiente similique laboriosam explicabo natus at error. Minus numquam sit laborum vitae, eligendi tempore nulla officiis iste! Aut sed numquam eaque quam at dignissimos maxime. Doloribus sed veniam fugiat reiciendis vel quos commodi vero iusto. Non ipsum error numquam alias illum obcaecati voluptatibus consequuntur, repellat iste, porro ratione explicabo sed, minima maxime dolore maiores! Adipisci veritatis omnis ex, iste animi eum dolore atque autem repellat, voluptatibus debitis officia ab voluptatem odio laborum tempore, repudiandae delectus. Recusandae, delectus quis minima soluta voluptates, id ratione et cupiditate alias commodi esse laboriosam quae dolore sed hic ducimus fugiat, ipsum quam dolor! Corrupti maiores earum, eum cupiditate incidunt voluptatibus neque rerum veniam, deleniti molestias dicta eos et impedit quod deserunt!</p>
 
 
 <!-- SCRIPTS -->

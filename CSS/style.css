@@ -1,3 +1,256 @@
+/*-- iPhone X Remove Gutters --*/
+html {
+    padding: env(safe-area-inset);
+}
 html, body {
+    overflow-x: hidden;
     font-family: 'Lato', sans-serif;
+    color: #505962;
+}
+.text-northstar {
+    color: #F26722;
+}
+.opacity-layer-black {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+/*--- Nav Scrolling Offset --*/
+.offset:before {
+    content: "";
+    height: 67.38px; /* this is the width of the navbar, we want to offset each section by that width */
+    /* need display: block to see the height */
+    display: block;
+    margin-top: -67.38px;
+}
+
+/*============= NAVIGATION =============*/
+.navbar-brand img {
+    height: 2rem;
+}
+.navbar {
+    padding: .7rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+    transition: background-color .5s ease;
+    /* background-color: #F26722; */
+}
+.navbar-nav li {
+    padding-right: .8rem;
+}
+.navbar-nav .nav-link {
+    color: white;
+    padding-top: .8rem;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    /* color: 	#f8b390; */
+    /* color: 	#a94817; */
+    /* color: 	#c1521b; */
+    color: 	#f9c2a6;
+}
+.custom-toggler-icon {
+    color: white;
+    font-size: 1.6rem;
+}
+.navbar.solid,
+.navbar.solid-toggle{
+    /* background: rgba(0, 0, 0, .7)!important; */
+    background: rgba(242, 103, 34, .8)!important;
+    transition: background-color 2s ease;
+}
+/*--- Drop-down Menu --*/
+.dropdown-menu, .dropdown-item {
+    font-size: .9rem;
+    font-weight: 700!important;
+    background-color: transparent!important;
+    border: 0;
+    color: white;
+}
+.dropdown-menu.show {
+    margin-top: .75rem!important;
+    border-radius: 0;
+    transition: background-color .5s ease 0s;
+}
+.dropdown-submenu {
+    transition: background-color .5s ease 0s;
+}
+.dropdown-menu.no-space-top {
+    margin-top: 0!important;
+}
+.dropdown-menu:hover, .dropdown-item:hover,
+.dropdown-menu:focus, .dropdown-item:focus,
+.dropdown-toggle:active, .dropdown-toggle:focus {
+    color: #f9c2a6!important;
+}
+.dropdown-submenu.solid,
+.dropdown-menu.show.solid {
+    background: rgba(0, 0, 0, 0.7)!important;
+    transition: background-color 1s ease 0s;
+}
+.dropdown-submenu > .dropdown-menu {
+    width: 100%;
+    margin-top: 0!important;
+}
+
+/*-- Remove Button Outline --*/
+button:focus, a:focus, a.btn:focus {
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    transition: all .6s ease;
+}
+button, a, a.btn,
+.svg-inline--fa {
+    transition: all .6s ease;
+}
+
+/*============= VIDEO LANDING PAGE =============*/
+
+/*--- Fixed Video Background--*/
+.video-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0, 0.7); /* Black Opacity On Video */
+}
+.video-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#video {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+    z-index: -1000;
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+/*-- Landing Page Caption --*/
+.caption {
+    /* this puts it on top on the landing element */
+    z-index: 1;
+    /* this will keep its position fixed. We determine its position using 'top: 20%' below */
+    position: absolute;
+    /* this puts it 20% from the top of the element to the top of the page. Combined with position: absolut it keeps it there */
+    top: 38%;
+    /* without a width, the 'text-center class on the element won't actually do anything */
+    width: 100%;
+    /* below should keep the text from overflowing on mobile */
+    max-width: 100%;
+}
+.caption h1 {
+    font-size: 4.5rem;
+    letter-spacing: .3rem;
+    /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+.caption h3 {
+    font-size: 2.5rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 2rem;
+}
+.caption .btn-lg {
+    border-width: medium;
+    padding: .8rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+/*-- Bouncing Down Arrow --*/
+.arrow {
+    /* this puts it on the same level as the landing element */
+    /* z-index: 1; */
+    /* this will keep its position fixed. We determine its position using 'bottom: 0' below */
+    position: absolute;
+    /* this puts it at the bottom of the page. Combined with position: absolute it keeps it there */
+    bottom: 0;
+    /* without a width, the 'text-center class on the element won't actually do anything */
+    width: 100%;
+    /* font-size: 4rem;
+    color: rgba(0, 0, 0, 0.6); */
+}
+/* this is font awesome's class for the icon that we pulled directly from the inspect tool in Chrome */
+.down-arrow .fa-angle-down {
+    /* color: white; */
+    color: #F26722;
+    font-size: 2.2rem;
+    opacity: 0.6;
+    animation: bounce 2s infinite;
+    /* for browser compatibility*/
+    -webkit-animation: bounce 2s infinite;
+}
+.down-arrow .fa-angle-down:hover {
+    opacity: 1;
+}
+
+/*============= IMAGE SLIDER =============*/
+
+.carousel-item {
+    height: 100vh; /*--- Change Height of Image Slider --*/
+    min-height: 18.75rem; /*--- (300px for mobile) --*/
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #1A1A1A; /*--- For Firefox white between slides --*/
+}
+
+/*---Change Carousel Transition Speed --*/
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+    transition: -webkit-transform 1.2s ease;
+    transition: transform 1.2s ease;
+    transition: transform 1.2s ease,-webkit-transform 1.2s ease;
+}
+/*-- Landing Page Caption --*/
+.philosophy-caption {
+    /* this puts it on top on the landing element */
+    z-index: 1;
+    /* this will keep its position fixed. We determine its position using 'top: 20%' below */
+    position: absolute;
+    /* this puts it 20% from the top of the element to the top of the page. Combined with position: absolut it keeps it there */
+    top: 25%;
+    /* without a width, the 'text-center class on the element won't actually do anything */
+    width: 100%;
+    /* below should keep the text from overflowing on mobile */
+    max-width: 100%;
+    color: white;
+}
+.philosophy-caption h3 {
+    font-size: 2.5rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 2rem;
+}
+.philosophy-caption p {
+    font-size: 2rem;
 }

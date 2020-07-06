@@ -1,0 +1,96 @@
+/*========== NAVBAR TRANSPARENT TO SOLID ==========*/
+function checkScroll() {
+    if ($(window).scrollTop() >= 400) {
+        $('.navbar').addClass('solid');
+    } else {
+        $('.navbar').removeClass('solid');
+    }
+}
+
+/*========== ADD SOLID CLASS TO NAVBAR WHEN TOGGLED ==========*/
+// (document).ready will ensure this jqeury takes effect before any html or css loads
+$(document).ready(function () {
+    // first, get the scroll position of the window right when everything loads
+    checkScroll();
+    // this will check if the window is being scrolled at all times and apply the solid black background if >= 300px
+    $(window).scroll(checkScroll);
+    //this will change to a solid black background whenever the user clicks the hamburger toggle icon
+    $('.navbar-toggler').click(function () {
+        // <=300 b/c >=300 is already covered in the checkScroll() function
+        // we give this a unique class name of 'solid-toggle' so as to not interfere with our other 'solid' class we created
+        if ($(window).scrollTop() <= 400) {
+            $('nav.navbar').toggleClass('solid-toggle');
+        }
+    })
+})
+
+
+
+/*========== CLOSE MOBILE MENU ON CLICK & SMOOTH SCROLL TO LINK ==========*/
+// below we are targeting links with a '#' in it
+// function (event) is needed since we want a specific click event that only fires on links with '#'
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    // the button with the class 'navbar-toggler' gains the class 'collapsed' when it is collapsed
+    // we can manually give it that class when a user clicks a nav link to collapse all the nav links
+    $('.navbar-toggler').addClass('collapsed');
+
+    // the div with the id of #navbarResponsive contains all of our nav links
+    // it gains a class called 'show' when we click on the button toggler
+    // this is not apparent, but can be seen using the inspect tool in Chrome
+    // so, we also need to remove the 'show' class to properly collapse our nav links
+    $('#navbarResponsive').removeClass('show');
+
+    // we need to remove the solid-toggle class when users click a link. If we don't, it will display a solid navbar at the top of the page when a user clicks the 'HOME' link
+    // that takes them back to the top of the page.
+    // It doesn't cause any issues elsewhere, b/c even if we remove the 'solid-toggle' class, the 'solid' class will still be present if the user's position on the page is
+    // >= 300px. setTimeout is used to slightly delay the fade animation when the scroll position goes back to the top of the page. Again, this only affects the navbar at
+    // the top of the page, b/c at >=300px the 'solid' class will be applied.
+    setTimeout(function() {
+        $('nav.navbar').removeClass('solid-toggle');
+    }, 300);
+    
+    // here we animate all scrolling that results from clicking a link
+    // scrollTop is a method for animating, there are other methods we could have used.
+    // offset().top is the destination where we will scroll to. Remember, in our HTML the 'href' for these links contain #id's corresponding to the different sections
+    // of the page, which are div's that contain those same #id's
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000) // 1000 is the animation speed for our scrolling
+})
+
+
+
+
+
+/*========== WAYPOINTS ANIMATION DELAY ==========*/
+//Original Resource: https://www.oxygenna.com/tutorials/scroll-animations-using-waypoints-js-animate-css
+$(function () { // a self calling function
+  function onScrollInit(items, trigger) { // a custom made function
+      items.each(function () { //for every element in items run function
+          var osElement = $(this), //set osElement to the current
+              osAnimationClass = osElement.attr('data-animation'), //get value of attribute data-animation type
+              osAnimationDelay = osElement.attr('data-delay'); //get value of attribute data-delay time
+
+          osElement.css({ //change css of element
+              '-webkit-animation-delay': osAnimationDelay, //for safari browsers
+              '-moz-animation-delay': osAnimationDelay, //for mozilla browsers
+              'animation-delay': osAnimationDelay //normal
+          });
+
+          var osTrigger = (trigger) ? trigger : osElement; //if trigger is present, set it to osTrigger. Else set osElement to osTrigger
+
+          osTrigger.waypoint(function () { //scroll upwards and downwards
+              osElement.addClass('animated').addClass(osAnimationClass); //add animated and the data-animation class to the element.
+          }, {
+                  triggerOnce: true, //only once this animation should happen
+                  offset: '70%' // animation should happen when the element is 70% below from the top of the browser window
+              });
+      });
+  }
+
+  onScrollInit($('.os-animation')); //function call with only items
+  onScrollInit($('.staggered-animation'), $('.staggered-animation-container')); //function call with items and trigger
+});
+
