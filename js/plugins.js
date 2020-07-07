@@ -24,6 +24,12 @@ $(document).ready(function () {
     })
 })
 
+/*========== BOUNCING DOWN ARROW ==========*/
+$(document).ready(function () {
+    $(window).scroll(function (){
+        $('.arrow').css('opacity', 1 - $(window).scrollTop() / 250)
+    })
+})
 
 
 /*========== CLOSE MOBILE MENU ON CLICK & SMOOTH SCROLL TO LINK ==========*/
@@ -60,6 +66,37 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     }, 1000) // 1000 is the animation speed for our scrolling
 })
 
+/*========== LIGHTBOX IMAGE GALLERY ==========*/
+// Settings for Lightbox
+// https://lokeshdhakar.com/projects/lightbox2/#options
+$(document).ready(function (){
+    lightbox.option({
+        'resizeDuration' : 500,
+        'wrapAround': true,
+        'imageFadeDuration': 400
+    })
+})
+
+/*========== REVIEWS CAROUSEL ==========*/
+$(document).ready(function(){ //when document(DOM) loads completely
+    $('#reviews-carousel').owlCarousel({ //owlCarousel settings
+        autoplay: true, //set to false to turn off autoplay and only use nav
+        autoplayHoverPause: true, //set to false to prevent pausing on hover
+        loop: true, //set to false to stop carousel after all slides shown
+        autoplayTimeout: 3500, //time between automated transitions
+        // smartSpeed: 1600, //transition speed
+        smartSpeed: 20000, //transition speed
+        // navSpeed: 200, //transition speed when using dots/buttons
+        responsive : { //set number of items shown per screen width
+            0 : {
+                items: 1 //0px width and up display 1 item
+            },
+            768 : {
+                items: 2 //788px medium width and up display 2 items
+            }
+        }
+    });
+});
 
 
 

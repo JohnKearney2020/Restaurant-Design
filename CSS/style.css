@@ -19,10 +19,10 @@ html, body {
 /*--- Nav Scrolling Offset --*/
 .offset:before {
     content: "";
-    height: 67.38px; /* this is the width of the navbar, we want to offset each section by that width */
+    height: 64px; /* this is the width of the navbar, we want to offset each section by that width */
     /* need display: block to see the height */
     display: block;
-    margin-top: -67.38px;
+    margin-top: -64px;
 }
 
 /*============= NAVIGATION =============*/
@@ -212,7 +212,7 @@ video {
     opacity: 1;
 }
 
-/*============= IMAGE SLIDER =============*/
+/*======================================================== PHILOSOPHY SECTION ================================================================*/
 
 .carousel-item {
     height: 100vh; /*--- Change Height of Image Slider --*/
@@ -244,13 +244,73 @@ video {
     width: 100%;
     /* below should keep the text from overflowing on mobile */
     max-width: 100%;
-    color: white;
+    /* color: white; */
 }
 .philosophy-caption h3 {
     font-size: 2.5rem;
-    text-shadow: .1rem .1rem .5rem black;
+    /* text-shadow: .05rem .05 .2rem #f9c2a6; */
+    /* text-shadow: 1px 1px 2px #f9c2a6; */
+    /* text-shadow: 2px 2px 4px #f9c2a6; */
+    /* text-shadow: 2px 2px 4px #F26722; */
+    /* text-shadow: 1px 1px 4px #F26722; */
     padding-bottom: 2rem;
+    color: #F26722;
+    /* color: #f9c2a6; */
 }
 .philosophy-caption p {
     font-size: 2rem;
+    color: white;
+}
+
+/*========================================================== SIGNATURE DISHES SECTION ==========================================================*/
+h3.heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-bottom: 1.9rem;
+}
+.heading-underline {
+    width: 3rem;
+    height: .2rem;
+    background-color: #F26722;
+    margin: 0 auto 2rem; /* 0 for top & bottom, auto for left & right, 2rem for bottom */
+}
+
+.portfolio-item img:hover {
+    /* this enlarges the images when we hover over them. */
+    /* IMPORTANT: the 'overflow-hidden' in <div class="portfolio-item overflow-hidden"> keeps the image from overflowing into surrounding
+    columns when we hover over it and change its scale by 30% */
+    transform: scale(1.1);
+    /* non-default cursor */
+    cursor: zoom-in;
+    /* IMPORTANT: transition: transform .4s ease will work here, but only on the hover over, not when the cursor leaves the image. See below for handling both 
+    situations that looks much nicer. */
+}
+.portfolio-item img {
+    /* IMPORTANT: this makes the hover transition smooth both when the cursor hovers over the img, but also when the cursor leaves the img */
+    transition: transform .4s ease;
+}
+/*========================================================== END SIGNATURE DISHES SECTION ==========================================================*/
+
+/*========================================================== Reviews SECTION =======================================================================*/
+#reviews-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.reviews img {
+    border-radius: 50%;
+    transition: transform .3s ease;
+}
+.reviews img:hover {
+    transform: scale(.95)
+}
+blockquote .svg-inline--fa {
+    /* margin: 1rem; */
+    color: #F26722;
+}
+.reviews-hr {
+    border-top: .1rem solid #F26722;
+}
+.svg-inline--fa fa-quote-left {
+    margin: 0px 0px;
 }
