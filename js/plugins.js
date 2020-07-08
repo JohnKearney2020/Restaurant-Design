@@ -84,9 +84,8 @@ $(document).ready(function(){ //when document(DOM) loads completely
         autoplayHoverPause: true, //set to false to prevent pausing on hover
         loop: true, //set to false to stop carousel after all slides shown
         autoplayTimeout: 3500, //time between automated transitions
-        smartSpeed: 1600, //transition speed
-        // smartSpeed: 20000, //transition speed
-        // navSpeed: 200, //transition speed when using dots/buttons
+        autoplaySpeed: 1600, // transition speed for automated transitions
+        smartSpeed: 800, //transition speed for clicking on the dots
         responsive : { //set number of items shown per screen width
             0 : {
                 items: 1 //0px width and up display 1 item
