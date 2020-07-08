@@ -1,3 +1,8 @@
+/* Main Color Scheme */
+/* primary color: #F26722 */
+/* lighter tent: #f9c2a6 */
+/* darker shade: #C1521B */
+
 /*-- iPhone X Remove Gutters --*/
 html {
     padding: env(safe-area-inset);
@@ -313,4 +318,131 @@ blockquote .svg-inline--fa {
 }
 .svg-inline--fa fa-quote-left {
     margin: 0px 0px;
+}
+
+.btn-northstarOrange {
+    background-color: #F26722!important;
+    color: white;
+    /* margin-right: 1rem; */
+}
+.btn-northstarOrange:hover {
+    background-color: #C1521B!important;
+    /* background-color: #d95c1e!important; */
+    /* background-color: #F26722!important; */
+    /* background-color: red!important; */
+    color: white;
+}
+.btn-northstarWhite {
+    background-color: white;
+    color: #F26722!important;
+    border: 1px solid #F26722;
+}
+.btn-northstarWhite:hover {
+    /* background-color: #C1521B!important; */
+    /* background-color: #d95c1e!important; */
+    /* background-color: #F26722!important; */
+    background-color: #f9c2a6!important;
+    color: white!important;
+
+}
+.btn-sm {
+    border-width: medium;
+    border-radius: 0;
+    padding: .5rem 1.1rem;
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin: 1rem;
+}
+/*========================================================== END Reviews SECTION =======================================================================*/
+
+
+
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 992px (lg) */
+@media (max-width: 991.98px) {
+    .caption h1 {
+        font-size: 3.5rem;
+        letter-spacing: .2rem;
+        padding-bottom: .8rem;
+    }
+    .caption h3 {
+        font-size: 2.2rem;
+        padding-bottom: 1.7rem;
+    }
+    .caption .btn-lg {
+        padding: .7rem 1.2rem;
+        font-size: 1rem;
+    }
+    .reviews img {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    .philosophy-caption h3 {
+        font-size: 2.2rem;
+    }
+    .philosophy-caption p {
+        font-size: 1.7rem;
+    }
+}
+
+/* Devices under 768px (md) */
+@media (max-width: 767.98px) {
+    .caption h1 {
+        font-size: 2.7rem;
+        letter-spacing: .15rem;
+        padding-bottom: .5rem;
+    }
+    .caption h3 {
+        font-size: 1.7rem;
+        padding-bottom: 1.2rem;
+    }
+    .caption .btn-lg {
+        padding: .6rem 1.1rem;
+    }
+    .philosophy-caption h3 {
+        font-size: 1.7rem;
+    }
+    .philosophy-caption p {
+        font-size: 1.4rem;
+    }
+    /* #features h1 {
+        font-size: 2rem;
+    }
+    .fixed-dark {
+        background-image: url('../img/fixed/apple-mobile.jpg');
+    }
+    .fixed-light {
+        background-image: url('../img/fixed/office-mobile.jpg');
+    }
+    .footer {
+        background: url('../img/footer/footer-mobile.jpg') no-repeat;
+    } */
+    /* .top-scroll {
+        display: none!important;
+    } */
+}
+
+/* Devices under 576px (sm) */
+@media (max-width: 575.98px) {
+    .caption h1 {
+        font-size: 1.9rem;
+        letter-spacing: .1rem;
+        padding-bottom: .4rem;
+    }
+    .caption h3 {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+    .caption .btn-lg {
+        padding: .4rem .9rem;
+        font-size: .9rem;
+    }
+    .philosophy-caption h3 {
+        font-size: 1.9rem;
+    }
+    .philosophy-caption p {
+        font-size: 1.3rem;
+    }
 }
