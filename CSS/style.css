@@ -1,6 +1,7 @@
 /* Main Color Scheme */
 /* primary color: #F26722 */
-/* lighter tent: #f9c2a6 */
+/* lighter tint: #f9c2a6 */
+/* lighter tint: rgb(249,194,166) */
 /* darker shade: #C1521B */
 /* primary text color:  #505962*/
 
@@ -29,6 +30,13 @@ html, body {
     /* need display: block to see the height */
     display: block;
     margin-top: -64px;
+}
+
+/*--- Extra Bootstrap Column Padding --*/
+
+/* we need to select all column classes */
+[class*="col-"] {
+    padding: 1rem;
 }
 
 /*============= NAVIGATION =============*/
@@ -296,7 +304,149 @@ h3.heading {
     /* IMPORTANT: this makes the hover transition smooth both when the cursor hovers over the img, but also when the cursor leaves the img */
     transition: transform .4s ease;
 }
-/*========================================================== END SIGNATURE DISHES SECTION ==========================================================*/
+/*=== END SIGNATURE DISHES SECTION ===*/
+
+
+/*========================================================== START LOCATIONS SECTION ==========================================================*/
+#locationHeading {
+    /* color: white; */
+    color: #F26722;
+    margin-bottom: .7rem;
+}
+#locations .sub-heading {
+    color: white;
+    /* color: #f9c2a6; */
+}
+.card-body h4 {
+    /* color: #C1521B; */
+    color: #505962;
+
+}
+.hours {
+    margin: .3rem auto;
+    font-size: 1rem;
+    /* color: #C1521B; */
+    color: #505962;
+    font-weight: 700;
+}
+
+/* primary color: #F26722 */
+/* lighter tint: #f9c2a6 */
+/* lighter tint: rgb(249,194,166) */
+/* darker shade: #C1521B */
+/* primary text color:  #505962*/
+
+/*--- iOS Fixed Background Image --*/
+.fixed {
+    position: relative;
+    width: 100%;
+}
+.fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* to make sure this fills all corners on all devices */
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+/*--- Team Light Background Image --*/
+.fixed-light {
+    background-image: url('../img/locations/locationBackground.jpg');
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    /* iOS specific styling */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: table;
+}
+.light {
+    /* background-color: rgba(255, 255, 255, 0.75); */
+    /* background-color: rgba(249, 194, 166, 0.75); */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5rem 0;
+    z-index: 1000;
+}
+
+/* Main Color Scheme */
+/* primary color: #F26722 */
+/* lighter tent: #f9c2a6 */
+/* darker shade: #C1521B */
+/* primary text color:  #505962*/
+
+
+/* 'owl-stage' is a class that gets added by owl carousel and is only visible with the inspect tool */
+.owl-stage {
+    display: flex;
+}
+.card {
+    height: 100%;
+    border-radius: 0;
+    text-align: center;
+    margin: 0 1rem;
+    border: .1rem solid rgba(0, 0, 0, .075);
+    box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+    transition: transform .4s ease;
+}
+.card:hover {
+    transform: scale(0.95);    
+}
+/* 'owl-dot' is a class that gets added by owl carousel and is only visible with the inspect tool */
+/* knowing that we need to target the <span></span> was accomplished using the inspect tool */
+button.owl-dot.active span,  button.owl-dot:hover span {
+    background: #F26722!important;
+}
+ul.social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+ul.social li {
+    display: inline;
+    padding-right: 0.8rem;
+}
+ul.social li a {
+    color:#F26722;
+    transition: all 0.3s ease;
+}
+ul.social li a:hover {
+    color: #505962;
+}
+.btn-menu {
+    background-color: white;
+    color: #F26722!important;
+    border-width: medium;
+    border-radius: 0;
+    padding: .3rem .4rem;
+    /* text-transform: uppercase; */
+    font-size: .8rem;
+    margin: .5rem .2rem;
+    border: .7px solid #F26722;
+}
+.btn-menu:hover {
+    background-color: #f9c2a6!important;
+    color: white!important;
+}
+
+.fa-book-open:hover {
+    color: white;
+}
+.fa-book-open {
+    /* without this, the menu icon noticeably lags behind the rest of the text changing color */
+    transition: transform .6s ease;
+}
+
+
 
 /*========================================================== Reviews SECTION =======================================================================*/
 #reviews-carousel {
@@ -405,13 +555,13 @@ blockquote .svg-inline--fa {
     /* top&bottom, left&right */
     margin: 1.5rem 0;
 }
-ul.social {
+.footer ul.social {
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
 }
-ul.social li {
+.footer ul.social li {
     display: inline;
     padding-right: 0.8rem;
 }
@@ -432,16 +582,6 @@ ul.social li {
     text-transform: uppercase;
     margin: 1.5rem 0;
 }
-
-
-/* ul.social li a {
-    color: #F26722!important;
-    transition: all 0.3s ease;
-} */
-/* ul.social li a:hover {
-    color: #505962;
-} */
-
 
 /* Contact Form */
 .form-group {
