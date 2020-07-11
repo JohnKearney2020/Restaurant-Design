@@ -98,7 +98,7 @@ $(document).ready(function(){ //when document(DOM) loads completely
 });
 
 
-/*========== SKILLS COUNTER ==========*/
+/*========== OUR NUMBERS COUNTER ==========*/
 $(document).ready(function () {
     $('.counter').counterUp({
         time: 5000,
@@ -107,6 +107,17 @@ $(document).ready(function () {
     })
 })
 
+/*========== TOP SCROLL BUTTON ==========*/
+$(document).ready(function () {
+    $(window).scroll(function () {
+        // this will make the scroll top icon appear once we scroll 500px down
+        if ($(this).scrollTop() > 500){
+            $('.top-scroll').fadeIn();
+        } else {
+            $('.top-scroll').fadeOut();
+        }
+    })
+})
 
 /*========== WAYPOINTS ANIMATION DELAY ==========*/
 //Original Resource: https://www.oxygenna.com/tutorials/scroll-animations-using-waypoints-js-animate-css

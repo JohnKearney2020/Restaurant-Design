@@ -2,6 +2,7 @@
 /* primary color: #F26722 */
 /* lighter tent: #f9c2a6 */
 /* darker shade: #C1521B */
+/* primary text color:  #505962*/
 
 /*-- iPhone X Remove Gutters --*/
 html {
@@ -487,6 +488,38 @@ hr.socket {
     width: 100%;
 }
 
+
+/*============= TOP SCROLL =============*/
+a.top-scroll {
+    /* This will put it 1.2rem from the right and bottom of the WINDOW */
+    right: 1.2rem;
+    bottom: 1.2rem;
+    /* This will keep it there as we scroll the page */
+    position: fixed;
+    opacity: .5;
+    /* ensure icon is always visible */
+    z-index: 1000;
+    /* by default we don't want the icon showing until users scroll down the page */
+    display: none;
+}
+a.top-scroll:hover {
+    opacity: .7;
+}
+.top-scroll .svg-inline--fa {
+    /* background: #f9c2a6; */
+    background: white;
+    /* color: #53595F; */
+    color: #C1521B;
+    /* this will scale up the whole icon and background */
+    font-size: 3rem;
+    /* this will make the white background arrow smaller vertically while slightly reducing the arrow size */
+    height: 1.7rem;
+}
+
+/* primary color: #F26722 */
+/* lighter tent: #f9c2a6 */
+/* darker shade: #C1521B */
+/* primary text color:  #505962*/
 
 /*============= MEDIA QUERIES =============*/
 
