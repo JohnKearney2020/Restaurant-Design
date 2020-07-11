@@ -101,7 +101,7 @@ $(document).ready(function(){ //when document(DOM) loads completely
 /*========== SKILLS COUNTER ==========*/
 $(document).ready(function () {
     $('.counter').counterUp({
-        time: 6000,
+        time: 5000,
         delay: 10,
         beginAt: 0,
     })
