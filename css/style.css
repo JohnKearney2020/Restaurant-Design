@@ -678,10 +678,11 @@ a.top-scroll:hover {
         margin: 0 auto;
     }
     .philosophy-caption h3 {
-        font-size: 2.2rem;
+        /* font-size: 2.2rem; */
+        font-size: 2rem;
     }
     .philosophy-caption p {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 }
 
