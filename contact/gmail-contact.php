@@ -39,7 +39,7 @@ try
 {
     
     if(count($_POST) == 0) throw new \Exception('Form is empty');
-    $emailTextHtml .= "<h3>New message from the Nuno Theme Site</h3><hr>";
+    $emailTextHtml .= "<h3>New message from the Northstar Cafe site</h3><hr>";
     $emailTextHtml .= "<table>";
 
     foreach ($_POST as $key => $value) {
@@ -80,25 +80,10 @@ $mail->IsSMTP();
                 $mail->AddAddress($sendToEmail);
                 $mail->AddReplyTo($fromEmail,$fromName);
 
-
-
-
-
-
     // end email configuration
 
 
-
-
-
-
-
-
-
-
-
-
-    $mail->Subject = 'New message from contact form';
+    $mail->Subject = 'New message from Northstar Cafe site';
 
     $mail->Body = $emailTextHtml;
     $mail->isHTML(true);
