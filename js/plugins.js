@@ -85,7 +85,7 @@ $(document).ready(function(){ //when document(DOM) loads completely
             autoplay: false, //set to false to turn off autoplay and only use nav
             autoplayHoverPause: true, //set to false to prevent pausing on hover
             loop: true, //set to false to stop carousel after all slides shown
-            // autoplayTimeout: 3500, //time between automated transitions
+            autoplayTimeout: 3600000, //time between automated transitions
             // autoplayTimeout: 0, //time between automated transitions. 0 turns it off.
             smartSpeed: 1200, //transition speed
             // smartSpeed: 0, //transition speed
