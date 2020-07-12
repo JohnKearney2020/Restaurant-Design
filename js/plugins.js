@@ -79,6 +79,51 @@ $(document).ready(function (){
 
 /*========== Locations CAROUSEL ==========*/
 $(document).ready(function(){ //when document(DOM) loads completely
+    if($(window).width() < 768) {
+        $('#locations-carousel').owlCarousel({ //owlCarousel settings
+            nav: true,
+            autoplay: false, //set to false to turn off autoplay and only use nav
+            autoplayHoverPause: true, //set to false to prevent pausing on hover
+            loop: true, //set to false to stop carousel after all slides shown
+            autoplayTimeout: 3500, //time between automated transitions
+            smartSpeed: 1200, //transition speed
+            // navSpeed: 200, //transition speed when using dots/buttons
+            responsive : { //set number of items shown per screen width
+                0 : {
+                    items: 1 //0px width and up display 1 item
+                },
+                768 : {
+                    items: 2 //788px medium width and up display 2 items
+                },
+                992 : {
+                    items: 3 //992px large width and up display 3 items
+                }
+            }
+        });
+    } else {
+        $('#locations-carousel').owlCarousel({ //owlCarousel settings
+            nav: false,
+            autoplay: true, //set to false to turn off autoplay and only use nav
+            autoplayHoverPause: true, //set to false to prevent pausing on hover
+            loop: true, //set to false to stop carousel after all slides shown
+            autoplayTimeout: 3500, //time between automated transitions
+            smartSpeed: 1200, //transition speed
+            // navSpeed: 200, //transition speed when using dots/buttons
+            responsive : { //set number of items shown per screen width
+                0 : {
+                    items: 1 //0px width and up display 1 item
+                },
+                768 : {
+                    items: 2 //788px medium width and up display 2 items
+                },
+                992 : {
+                    items: 3 //992px large width and up display 3 items
+                }
+            }
+        });
+    }
+
+
     $('#locations-carousel').owlCarousel({ //owlCarousel settings
         autoplay: true, //set to false to turn off autoplay and only use nav
         autoplayHoverPause: true, //set to false to prevent pausing on hover
