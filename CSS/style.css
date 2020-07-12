@@ -537,13 +537,7 @@ blockquote .svg-inline--fa {
 /* ===== End Our Numbers Section */
 
 /*==================================================== START Contact Us SECTION ===================================================================*/
-.footer {
-    background: url('../img/footer/footer.jpg') no-repeat;
-    background-size: cover;
-    /* color: white; */
-    color: #F26722;
-    /* background-color: #fff; */
-}
+
 /* below, no space between 'row' and 'outer' b/c they are in the same element */
 .row.outer {
     background-color: white;
