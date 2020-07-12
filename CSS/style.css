@@ -606,6 +606,7 @@ blockquote .svg-inline--fa {
     transition: background-color 5000s ease-in-out 0s;
     /* -webkit-box-shadow: 0 0 0px 1000px #f9c2a6 inset;
     -webkit-text-fill-color: #505962; */
+    box-shadow: 0 0 0px 1000px white inset;
     -webkit-box-shadow: 0 0 0px 1000px white inset;
     -webkit-text-fill-color: #505962;
 }
