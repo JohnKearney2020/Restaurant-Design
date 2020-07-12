@@ -132,8 +132,8 @@ $(document).ready(function(){ //when document(DOM) loads completely
 $(document).ready(function () {
     if($(window).width() < 768) {
         $('.counter').counterUp({
-            time: 1000,
-            delay: 10,
+            time: 1000, //The total duration of the count up animation
+            delay: 10, //The delay in milliseconds per number count up
             beginAt: 0,
         })
     } else {
@@ -143,7 +143,7 @@ $(document).ready(function () {
             beginAt: 0,
         })
     }
-}
+})
 
 
 /*========== TOP SCROLL BUTTON ==========*/
