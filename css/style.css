@@ -679,10 +679,10 @@ a.top-scroll:hover {
     }
     .philosophy-caption h3 {
         /* font-size: 2.2rem; */
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .philosophy-caption p {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -737,6 +737,9 @@ a.top-scroll:hover {
     .caption .btn-lg {
         padding: .4rem .9rem;
         font-size: .9rem;
+    }
+    .philosophy-caption {
+        top: 5%;
     }
     .philosophy-caption h3 {
         font-size: 1.9rem;
