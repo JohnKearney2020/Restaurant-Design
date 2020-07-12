@@ -122,13 +122,29 @@ $(document).ready(function(){ //when document(DOM) loads completely
 
 
 /*========== OUR NUMBERS COUNTER ==========*/
+// $(document).ready(function () {
+//     $('.counter').counterUp({
+//         time: 5000,
+//         delay: 10,
+//         beginAt: 0,
+//     })
+// })
 $(document).ready(function () {
-    $('.counter').counterUp({
-        time: 5000,
-        delay: 10,
-        beginAt: 0,
-    })
-})
+    if($(window).width() < 768) {
+        $('.counter').counterUp({
+            time: 1000,
+            delay: 10,
+            beginAt: 0,
+        })
+    } else {
+        $('.counter').counterUp({
+            time: 5000,
+            delay: 10,
+            beginAt: 0,
+        })
+    }
+}
+
 
 /*========== TOP SCROLL BUTTON ==========*/
 $(document).ready(function () {
