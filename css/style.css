@@ -247,19 +247,31 @@ video {
     transition: transform 1.2s ease,-webkit-transform 1.2s ease;
 }
 /*-- Landing Page Caption --*/
+.philosophy-aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* margin: 35%vw; */
+}
+.philosophy-aligner-item {
+    max-width: 70%;
+}
 .philosophy-caption {
     /* this puts it on top on the landing element */
-    z-index: 1;
+    /* z-index: 1; */
     /* this will keep its position fixed. We determine its position using 'top: 20%' below */
-    position: absolute;
+    /* position: relative; */
     /* this puts it 20% from the top of the element to the top of the page. Combined with position: absolut it keeps it there */
-    top: 25%;
+    /* top: 25%; */
     /* without a width, the 'text-center class on the element won't actually do anything */
-    width: 100%;
+    /* width: 100%; */
     /* below should keep the text from overflowing on mobile */
-    max-width: 100%;
+    /* max-width: 100%; */
+    /* height: 100%; */
     /* color: white; */
 }
+
 .philosophy-caption h3 {
     font-size: 2.5rem;
     /* text-shadow: .05rem .05 .2rem #f9c2a6; */
@@ -738,9 +750,9 @@ a.top-scroll:hover {
         padding: .4rem .9rem;
         font-size: .9rem;
     }
-    .philosophy-caption {
+    /* .philosophy-caption {
         top: 10%;
-    }
+    } */
     .philosophy-caption h3 {
         font-size: 1.8rem;
         padding-bottom: 1rem;
