@@ -334,6 +334,9 @@ h3.heading {
     color: #505962;
 
 }
+.grab {
+    cursor: grab;
+}
 .hours {
     margin: .3rem auto;
     font-size: 1rem;
