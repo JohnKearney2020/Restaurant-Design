@@ -9,8 +9,6 @@
     <meta name="Description" content="Enter your description here"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Font Awesome -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"> -->
 	<!-- Font Awesome Kit -->
 	<script src="https://kit.fontawesome.com/21b3862e04.js" crossorigin="anonymous"></script>
     <!-- Google Fonts - Lato -->
@@ -24,8 +22,8 @@
 	http://owlcarousel2.github.io/OwlCarousel2/ -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <!-- Local CSS Files -->
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <!-- Local CSS Files -->
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
 	<link rel="stylesheet" href="./css/plugins.css" type="text/css">
 
     <!-- jQuery, Popper.js, and Bootstrap Scripts -->
@@ -685,7 +683,8 @@
 						<div class="col-md-7 px-0 pl-md-3">
 							<h3>Contact Us</h3>
 							<!-- action is needed along with method for when users submit -->
-							<form action="contact/gmail-contact.php" method="POST" id="contact-form">
+							<!-- <form action="contact/gmail-contact.php" method="post" id="contact-form"> -->
+							<form method="POST" id="contact-form" data-netlify="true">
 								<!-- The div below populates when users click the submit button on the contact form -->
 								<div class="messages"></div>
 								<div class="controls">
@@ -697,7 +696,7 @@
 									</div>
 									<div class="form-group">
 										<!-- we removed 'cols=30' b/c it will take up the full width anyway -->
-										<textarea name="message" id="form_message" rows="4" class="form-control" required="required" placeholder="Add your message."></textarea>
+										<textarea name="message" id="form_message" rows="4" class="form-control" required="required" placeholder="If you cloned this from GitHub this contact form will not work. See the live version of the site for the functioning contact form."></textarea>
 									</div>
 									<!-- <input type="submit" class="btn btn-outline-light btn-sm" value="Send Message"> -->
 									<input type="submit" class="btn btn-northstarWhite btn-sm" value="Send Message">
