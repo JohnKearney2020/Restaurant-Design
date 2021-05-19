@@ -682,34 +682,26 @@
 						</div> <!-- End of Col -->
 						<div class="col-md-7 px-0 pl-md-3">
 							<h3>Contact Us</h3>
+
+              <form name="contact" method="POST" data-netlify="true">
+                <div class="controls">
+                  <div class="form-group">
+										<input type="text" id="form_name" class="form-control" name="name" required="required" placeholder="Enter your name.">
+									</div>
+                  <div class="form-group">
+										<input type="email" id="form_email" class="form-control" name="email" required="required" placeholder="Enter your email.">
+									</div>
+                  <div class="form-group">
+										<textarea name="message" id="form_message" rows="4" class="form-control" required="required" placeholder="Add your message."></textarea>
+									</div>
+                  <input type="submit" class="btn btn-northstarWhite btn-sm" value="Send Message">
+                </div> <!-- End of Controls-->
+              </form> <!-- End of Contact Form-->
+
+
 							<!-- action is needed along with method for when users submit -->
-							<!-- <form action="contact/gmail-contact.php" method="post" id="contact-form"> -->
-
-                <form name="contact" method="POST" data-netlify="true">
-                  <p>
-                    <label>Your Name: <input type="text" name="name" /></label>   
-                  </p>
-                  <p>
-                    <label>Your Email: <input type="email" name="email" /></label>
-                  </p>
-                  <!-- <p>
-                    <label>Your Role: <select name="role[]" multiple>
-                      <option value="leader">Leader</option>
-                      <option value="follower">Follower</option>
-                    </select></label>
-                  </p> -->
-                  <p>
-                    <label>Message: <textarea name="message"></textarea></label>
-                  </p>
-                  <p>
-                    <button type="submit">Send</button>
-                  </p>
-                </form>
-
-
-							<!-- <form method="POST" id="contact-form" data-netlify="true"> -->
-								<!-- The div below populates when users click the submit button on the contact form -->
-								<!-- <div class="messages"></div>
+							<!-- <form action="contact/gmail-contact.php" method="POST" id="contact-form">
+								<div class="messages"></div>
 								<div class="controls">
 									<div class="form-group">
 										<input type="text" id="form_name" class="form-control" name="name" required="required" placeholder="Enter your name.">
@@ -717,18 +709,16 @@
 									<div class="form-group">
 										<input type="email" id="form_email" class="form-control" name="email" required="required" placeholder="Enter your email.">
 									</div>
-									<div class="form-group"> -->
-										<!-- we removed 'cols=30' b/c it will take up the full width anyway -->
-										<!-- <textarea name="message" id="form_message" rows="4" class="form-control" required="required" placeholder="If you cloned this from GitHub this contact form will not work. See the live version of the site for the functioning contact form."></textarea>
-									</div> -->
-									<!-- <input type="submit" class="btn btn-outline-light btn-sm" value="Send Message"> -->
-									<!-- <input type="submit" class="btn btn-northstarWhite btn-sm" value="Send Message"> -->
-								<!-- </div> End of Controls -->
-							<!-- </form> End of Form -->
-
-
-
-						</div> <!-- End of Col -->
+									<div class="form-group">
+										<textarea name="message" id="form_message" rows="4" class="form-control" required="required" placeholder="Add your message."></textarea>
+									</div>
+									<input type="submit" class="btn btn-northstarWhite btn-sm" value="Send Message">
+								</div>
+							</form>  -->
+						
+            
+            
+            </div> <!-- End of Col -->
 					</div> <!-- End of Row -->
 				</div> <!-- End of Container -->
 
