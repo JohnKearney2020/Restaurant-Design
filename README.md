@@ -1,4 +1,12 @@
 # Northstar Cafe Website
 This project is a static website built using HTML, CSS, and Bootstrap. It is a single page application meant to give visitors all the information they need about Northstar Cafe in one easy to navigate page.
 
-![](/img/markdownImages/landing.png "Northstar Cafe Header and Navbar")
+### Some Features:
+*Animations using [animate.css](https://animate.style/)*:
+
+<p align="center">
+  <img width="800" src="/img/markdownImages/headerGif2.gif">
+</p>
+
+*Automatic navigation scrolling using [waypoints](http://imakewebthings.com/waypoints/)*
+
