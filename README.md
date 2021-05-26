@@ -8,5 +8,10 @@ This project is a static website built using HTML, CSS, and Bootstrap. It is a s
   <img width="800" src="/img/markdownImages/headerGif2.gif">
 </p>
 
-*Automatic navigation scrolling using [waypoints](http://imakewebthings.com/waypoints/)*
+*Automatic navigation scrolling*
 
+<p align="center">
+  <img width="800" src="/img/markdownImages/navScrollingGif.gif">
+</p>
+
+*Animated Carousels*
