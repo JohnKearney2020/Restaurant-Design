@@ -210,8 +210,6 @@ $(document).ready(function () {
     // if the window is less than 768 px, change the data animation attribute on all divs that have it to 'fadeInUp'
     if($(window).width() < 768) {
         $('div').attr('data-animation', 'fadeInUp');
-        // $('div').attr('data-delay', '0s');
-
     }
 });
 
@@ -224,10 +222,11 @@ $(function () {
     // otherwise download from http://1000hz.github.io/bootstrap-validator
   
     $('#contact-form').validator();
-  
-  
+    // =============================================================================
+    // As of May 2021 this is no longer being used after the PHP mailer broke
+    // =============================================================================
     // when the form is submitted
-    $('#contact-form').on('submit', function (e) {
+    // $('#contact-form').on('submit', function (e) {
     //   console.log('Contact form submit clicked.');
         // if the validator does not prevent form submit
         // if (!e.isDefaultPrevented()) {
@@ -259,7 +258,7 @@ $(function () {
         //     });
         //     return false;
         // }
-    })
+    // })
   });
 
 /*========== WAYPOINTS ANIMATION DELAY ==========*/
