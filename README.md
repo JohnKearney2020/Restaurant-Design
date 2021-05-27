@@ -33,7 +33,7 @@ See the live website [here](https://johnkearneyrest.netlify.app/).
   <img src="/img/markdownImages/contactForm.jpg">
 </p>
 
-Checkout the live webiste [here](https://johnkearneyrest.netlify.app/) to see the features in action.
+Checkout the live website [here](https://johnkearneyrest.netlify.app/) to see the features in action.
 
 ### Full List of libraries used:
 
