@@ -4,7 +4,7 @@ This project is a static website built using HTML, CSS, and Bootstrap. It is a s
 See the live website [here](https://johnkearneyrest.netlify.app/).
 
 ### Some Features:
-*Animations using [animate.css](https://animate.style/)*:
+*Animations*:
 
 <p align="center">
   <img width="800" src="/img/markdownImages/headerGif2.gif">
@@ -29,7 +29,9 @@ See the live website [here](https://johnkearneyrest.netlify.app/).
 </p>
 
 *Functional Contact Form*
-
+<p align="center">
+  <img src="/img/markdownImages/contactForm.png">
+</p>
 
 Checkout the live webiste [here](https://johnkearneyrest.netlify.app/) to see the features in action.
 
